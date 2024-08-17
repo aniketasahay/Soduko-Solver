@@ -11,9 +11,8 @@ Future Prospects:
 GUI/CLI: Plans to add a user-friendly interface for interacting with the solver.
 Optimization: Potential to improve the algorithm for faster solving times.
 Puzzle Generator: Add functionality to generate Sudoku puzzles of varying difficulty levels.
-Project Structure
+#Project Structure
 bash
-Copy code
 ├── src
 │   ├── com
 │   │   └── sudoku
@@ -25,6 +24,7 @@ Copy code
 │   │           └── SudokuUtils.java      # Utility functions (future usage)
 ├── docs                                 # Generated Javadoc documentation
 └── README.md                            # Project documentation
+
 Setup
 Prerequisites
 Java Development Kit (JDK): Make sure you have JDK 8 or higher installed.
