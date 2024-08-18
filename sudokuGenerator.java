@@ -5,13 +5,13 @@ import java.net.http.HttpResponse;
 import java.io.IOException;
 import java.util.Arrays;
 
-public static class sudokuGenerator {
+public class sudokuGenerator {
 
     private static final String API_URL = "https://sudoku-generator1.p.rapidapi.com/sudoku/generate";
     private static final String API_KEY = "3f7802f995mshcb8dee8c4d2f88dp139051jsn6afbae4ac0b8";
     private static final String API_HOST = "sudoku-generator1.p.rapidapi.com";
 
-    public static int[][] generateSudoku(String difficulty) throws IOException, InterruptedException {
+    public int[][] generateSudoku(String difficulty) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(API_URL + "?difficulty=" + difficulty))

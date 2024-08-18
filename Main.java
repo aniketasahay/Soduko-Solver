@@ -1,9 +1,9 @@
 import java.io.*;
 import java.util.*;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+//import java.net.URI;
+//import java.net.http.HttpClient;
+//import java.net.http.HttpRequest;
+//import java.net.http.HttpResponse;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
@@ -120,10 +120,29 @@ public class Main {
     // 4. Generate random grid using an API key
     public static int[][] generateGridFromAPI() {
         sudokuGenerator generator = new sudokuGenerator();
+        System.out.println("IF choice = '1'--> difficulty = easy");
+        System.out.println("IF choice = '2'--> difficulty = hard");
+        System.out.println("IF choice = default--> difficulty = medium");
+        int choice = scanner.nextInt();
+        String difficultyLevel = "";
+        switch (choice) {
+            case 1: 
+             difficultyLevel = "easy";
+                break;
+            case 2: 
+                 difficultyLevel = "hard";
+                break;
+            default:
+             difficultyLevel = "medium";
+                break;
+        }
+        
         try {
-          return generator.generateSudoku("easy");
+            System.out.println("error fetching random board");
+          return generator.generateSudoku(difficultyLevel);
       } catch (IOException | InterruptedException e) {
           e.printStackTrace();
+          return inputGrid();
       }
     }
 }

@@ -1,6 +1,6 @@
 public class sudokuSolver {
 
-	public static void Print(int[][] grid, int row, int col) {
+	public void Print(int[][] grid, int row, int col) {
 		if (col == 9) {
 			row++;
 			col = 0;
@@ -24,7 +24,7 @@ public class sudokuSolver {
 	}
 
 	public static boolean isitsafe(int[][] grid, int row, int col, int val) {
-		// TODO Auto-generated method stub
+		
 		// row
 		for (int r = 0; r < grid.length; r++) {
 			if (grid[r][col] == val) {
@@ -53,7 +53,7 @@ public class sudokuSolver {
 	}
 
 	public static void Display(int[][] grid) {
-		// TODO Auto-generated method stub
+		
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid.length; j++) {
 				System.out.print(grid[i][j] + " ");
